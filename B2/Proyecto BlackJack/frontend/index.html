@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Blackjack 21</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header-links">
+      <a href="landing.html" class="landing-link">
+        <i class="fas fa-home"></i>
+        Volver a Inicio
+      </a>
+    </div>
+    <h1>BLACKJACK 2IA </h1>
+    
+        <!-- Sección de controles principales -->
+    <div class="controls-section">
+      <button onclick="compartirPantalla()" class="btn-primary">Iniciar Compartir Pantalla</button>
+      <button onclick="resetMazo()" class="btn-secondary">Reset Mazo</button>
+    </div>
+
+    <!-- Layout principal -->
+    <div class="main-layout">
+      <!-- Sección de video (izquierda) -->
+      <div class="video-section">
+        <button onclick="capturarImagen()" class="btn-capture">Capturar Imagen</button>
+        <div class="value-section">
+          <h2>Valor Zen</h2>
+          <div class="value-display">
+            <span class="zen-number">0</span>
+          </div>
+                <!-- Indicador ZEN
+          <div class="gauge-container">
+            <canvas id="zen-gauge" width="180" height="100"></canvas>
+
+          </div> -->
+        </div>
+        <video autoplay playsinline></video>
+      </div>
+
+      <!-- Sección de información del juego (derecha) -->
+      <div class="game-info">
+        <div class="players-container">
+          <h2>Jugadores</h2>
+          <div class="players-grid" id="players-grid">
+            <!-- Los jugadores se generarán dinámicamente aquí -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <!-- Tutorial básico -->
+    <div id="tutorial-simple" class="tutorial-simple hidden">
+      <div class="tutorial-fondo"></div>
+      <div id="tutorial-caja" class="tutorial-caja">
+        <div class="tutorial-header">
+          <div class="paso-numero" id="numero-del-paso-del-tutorial"></div>
+          <h3 id="tutorial-titulo">Paso 1</h3>
+        </div>
+        <p id="tutorial-texto">Descripción del paso</p>
+        <div class="tutorial-botones">
+          <button id="tutorial-anterior">← Anterior</button>
+          <button id="tutorial-siguiente">Siguiente →</button>
+          <button id="tutorial-cerrar">✕ Cerrar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Botón para iniciar tutorial -->
+    <button id="start-tutorial" class="tutorial-start-btn" title="Iniciar Tutorial">
+      <i class="fas fa-question"></i>
+    </button>
+
+
+
+
+    
+  <script src="script.js"></script>
+</body>
+</html> 
